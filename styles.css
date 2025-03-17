@@ -1,0 +1,531 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+    text-align: center;
+    margin: 0;
+}
+
+/* Encabezado con logo e iconos */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffe500;
+}
+
+.logo {
+    height: 50px;
+}
+
+.iconos img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+/* Barra de navegación */
+nav {
+    background-color: #ff9900;
+    padding: 10px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    flex-grow: 1;
+    text-align: center;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    background-color: #ff6600;
+}
+
+/* Barra de búsqueda */
+.busqueda {
+    margin: 20px 0;
+}
+
+.busqueda input {
+    width: 80%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #ff9900;
+}
+
+/* Grid de personajes */
+.nosotros-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.nosotros-item {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espacio entre la imagen y el texto */
+    max-width: 100%;
+}
+
+.nosotros-item img {
+    width: 250px; /* Tamaño fijo para las imágenes */
+    height: auto;
+    border-radius: 10px;
+}
+
+.nosotros-item h2 {
+    margin-bottom: 10px;
+}
+
+.nosotros-item p {
+    flex: 1; /* Hace que el texto ocupe el resto del espacio */
+    text-align: justify;
+}
+
+/* Responsive: Si la pantalla es pequeña, la imagen vuelve a estar arriba */
+@media (max-width: 768px) {
+    .nosotros-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nosotros-item img {
+        width: 200%;
+        max-width: 400px;
+    }
+}
+
+
+footer {
+    background: #ffcc00;
+    padding: 15px;
+    text-align: center;
+}
+
+.testimonios-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.testimonios-imagenes {
+    display: flex;
+    gap: 20px;
+}
+
+.testimonios-imagenes img {
+    width: 45%;
+    border-radius: 10px;
+}
+
+.testimonio-video {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.video-placeholder {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.texto-testimonio {
+    max-width: 600px;
+    background: #fff9c4; /* Fondo amarillo pastel suave */
+    padding: 15px 20px;
+    border-left: 5px solid #ff9800; /* Barra lateral tipo cita */
+    border-radius: 10px;
+    font-size: 16px;
+    font-style: italic;
+    line-height: 1.6;
+    color: #444;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.texto-testimonio:hover {
+    transform: scale(1.02); /* Efecto ligero de crecimiento */
+}
+
+.texto-testimonio p {
+    margin: 10px 0;
+}
+
+/* Responsive: Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .texto-testimonio {
+        max-width: 100%;
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+}
+
+
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.red {
+    text-align: center;
+}
+
+.red img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.directorio, .oficinas {
+    text-align: center;
+    padding: 20px;
+}
+
+.oficinas img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+footer {
+    background: #ffcc00;
+    padding: 15px;
+    text-align: center;
+}
+
+.oficinas iframe {
+    width: 100%;
+    max-width: 800px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+}
+
+.card {
+    width: 200px; /* Tamaño uniforme para las tarjetas */
+    height: 250px; /* Ajuste de altura para que sean cuadradas */
+    text-align: center;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%; /* Hace que la imagen ocupe el ancho total */
+    height: 180px; /* Establece una altura fija */
+    object-fit: cover; /* Hace que la imagen se ajuste y recorte si es necesario */
+    border-radius: 10px 10px 0 0;
+}
+
+.card p {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+.banner {
+    width: 100%; /* Ocupar todo el ancho de la pantalla */
+    height: 500px; /* Altura ajustable según diseño */
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+    display: block;
+    margin: 0 auto;
+}
+
+.video-placeholder {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 10px;
+}
+
+
+.nosotros-item ul {
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0;
+}
+
+.nosotros-item li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #fff3cd; /* Fondo amarillo pastel */
+    padding: 10px 15px;
+    border-left: 5px solid #ff9800; /* Barra lateral para resaltar cada valor */
+    border-radius: 8px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #444;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px; /* Espaciado entre valores */
+    transition: transform 0.2s ease-in-out;
+}
+
+.nosotros-item li:hover {
+    transform: scale(1.03); /* Efecto ligero de agrandamiento al pasar el mouse */
+}
+
+.nosotros-item li p {
+    font-weight: bold;
+    color: #d35400; /* Color llamativo para los títulos de cada valor */
+    margin: 0;
+}
+
+/* Iconos para resaltar los valores */
+.nosotros-item li::before {
+    content: "⭐"; /* Puedes cambiarlo por otro emoji o icono */
+    font-size: 18px;
+    color: #ff9800;
+}
+
+.nosotros-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #e3f2fd; /* Fondo azul pastel para destacar la sección */
+    padding: 20px;
+    border-left: 5px solid #1976d2; /* Barra lateral azul */
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.nosotros-item:hover {
+    transform: scale(1.02); /* Efecto ligero de agrandamiento al pasar el mouse */
+}
+
+.nosotros-item img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.nosotros-item h2 {
+    font-size: 22px;
+    color: #1976d2; /* Azul para destacar los títulos */
+    margin-bottom: 10px;
+}
+
+.nosotros-item p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #000;
+    text-align: justify;
+    max-width: 600px;
+}
+
+/* Responsive: Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .nosotros-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nosotros-item img {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+.detalle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.miniaturas {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.miniaturas img {
+    width: 70px; /* Mantiene un tamaño uniforme */
+    height: 70px; /* Asegura que sean cuadradas */
+    object-fit: scale-down; /* Ajusta la imagen sin recortarla */
+    background-color: white; /* Agrega fondo para evitar cortes */
+    padding: 5px; /* Espacio alrededor para que no se vean ajustadas */
+    border-radius: 8px; /* Bordes redondeados */
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.miniaturas img:hover {
+    border-color: #ff9800; /* Efecto de resaltado al pasar el mouse */
+}
+
+
+.imagen-principal {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.info {
+    max-width: 500px;
+}
+
+.info h1 {
+    color: #ff9800;
+    font-size: 24px;
+}
+
+.boton-agregar {
+    background: #ff9800;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.boton-agregar:hover {
+    background: #e68900;
+}
+
+/* Personajes relacionados */
+#relacionados {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    text-align: center;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.detalle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+
+
+.imagen-principal {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.info {
+    max-width: 500px;
+}
+
+.info h1 {
+    color: #ff9800;
+    font-size: 24px;
+}
+
+.boton-agregar {
+    background: #ff9800;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.boton-agregar:hover {
+    background: #e68900;
+}
+
+/* Personajes relacionados */
+#relacionados {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    text-align: center;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+

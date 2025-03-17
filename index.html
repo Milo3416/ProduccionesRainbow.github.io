@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producciones Rainbow</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        // Función para redirigir a la página de detalles con el personaje seleccionado
+        function verDetalle(personaje) {
+            window.location.href = `detalle_personaje.html?personaje=${personaje}`;
+        }
+    </script>
+</head>
+<body>
+    <!-- Encabezado con logo e iconos -->
+    <header>
+        <div class="top-bar">
+            <img src="C:\Users\Camilo Serratos\Downloads\Pagina_Rainbow\Imagenes\LOGOTIPOS\Logo PR (HO)_Mesa de trabajo 1.png" alt="Logo" class="logo">
+            <div class="iconos">
+                <a href="#usuario"><img src="C:\Users\Camilo Serratos\Downloads\Pagina_Rainbow\Imagenes\USUARIO.png" alt="Usuario"></a>
+                <a href="#carrito"><img src="C:\Users\Camilo Serratos\Downloads\Pagina_Rainbow\Imagenes\CARRITO.png" alt="Carrito"></a>
+            </div>
+        </div>
+        
+        <!-- Barra de navegación estilo flex -->
+        <nav>
+            <ul>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="index.html#personajes">Personajes</a></li>
+                <li><a href="testimonios.html">Testimonios</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>  
+    </header>
+    
+    <!-- Barra de búsqueda -->
+    <section class="busqueda">
+        <input type="text" placeholder="Busca a tus personajes favoritos...">
+    </section>
+    
+    <!-- Sección de personajes con cards -->
+    <section id="personajes" class="catalogo">
+        <div class="grid-container">
+            <div class="card" onclick="verDetalle('BelyBeto')"><img src="C:\Users\Camilo Serratos\Downloads\Pagina_Rainbow\Imagenes\BELY Y BETO\Captura de Pantalla 2025-03-16 a la(s) 15.37.33.png" alt="Bely y Beto"><p>Bely y Beto</p></div>
+            <div class="card" onclick="verDetalle('LuliPampin')"><img src="C:\Users\Camilo Serratos\Downloads\Pagina_Rainbow\Imagenes\LULI PAMPIN\Captura de Pantalla 2025-03-16 a la(s) 15.42.41.png" alt="Luli Pampín"><p>Luli Pampín</p></div>
+            <div class="card" onclick="verDetalle('Frozen')"><img src="C:\Users\Camilo Serratos\Downloads\Pagina_Rainbow\Imagenes\FROZEN\Captura de Pantalla 2025-03-16 a la(s) 16.15.43.png" alt="Frozen"><p>Frozen</p></div>
+            <div class="card" onclick="verDetalle('Sirenita')"><img src="C:\Users\Camilo Serratos\Downloads\Pagina_Rainbow\Imagenes\SIRENITA\Captura de Pantalla 2025-03-16 a la(s) 16.07.58.png" alt="Sirenita"><p>Sirenita</p></div>
+            <div class="card" onclick="verDetalle('Pikachu')"><img src="C:\Users\Camilo Serratos\Downloads\Pagina_Rainbow\Imagenes\POKEMON\Captura de Pantalla 2025-03-16 a la(s) 16.06.04.png" alt="Pikachu"><p>Pikachu</p></div>
+            <div class="card" onclick="verDetalle('PlimPlim')"><img src="C:\Users\Camilo Serratos\Downloads\Pagina_Rainbow\Imagenes\PLIM PLIM\IMG_1380.jpeg" alt="Plim Plim"><p>Plim Plim</p></div>
+            <div class="card" onclick="verDetalle('Cenicienta')"><img src="C:\Users\Camilo Serratos\Downloads\Pagina_Rainbow\Imagenes\CENICIENTA\Captura de Pantalla 2025-03-16 a la(s) 15.55.37.png" alt="Cenicienta"><p>Cenicienta</p></div>
+            <div class="card" onclick="verDetalle('BelyBetoPepo')"><img src="C:\Users\Camilo Serratos\Downloads\Pagina_Rainbow\Imagenes\BELY Y BETO\IMG_0684.jpeg" alt="Bely, Beto y Pepo"><p>Bely, Beto y Pepo</p></div>
+        </div>
+    </section>
+</body>
+</html>
+

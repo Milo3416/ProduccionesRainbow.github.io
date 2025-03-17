@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Personaje</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <div class="top-bar">
+            <img src="C:\Users\Camilo Serratos\Downloads\Pagina_Rainbow\Imagenes\LOGOTIPOS\Logo PR (HO)_Mesa de trabajo 1.png" alt="Logo" class="logo">
+            <div class="iconos">
+                <a href="#usuario"><img src="C:\Users\Camilo Serratos\Downloads\Pagina_Rainbow\Imagenes\USUARIO.png" alt="Usuario"></a>
+                <a href="#carrito"><img src="C:\Users\Camilo Serratos\Downloads\Pagina_Rainbow\Imagenes\CARRITO.png" alt="Carrito"></a>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#personajes">Personajes</a></li>
+                <li><a href="testimonios.html">Testimonios</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección de detalles del personaje -->
+    <section id="detalle-personaje">
+        <div class="detalle-container">
+            <!-- Miniaturas -->
+            <div class="miniaturas">
+                <img id="mini1" src="" alt="Miniatura 1" onclick="cambiarImagen(1)">
+                <img id="mini2" src="" alt="Miniatura 2" onclick="cambiarImagen(2)">
+                <img id="mini3" src="" alt="Miniatura 3" onclick="cambiarImagen(3)">
+            </div>
+
+            <!-- Imagen Principal -->
+            <img id="personaje-imagen" class="imagen-principal" src="" alt="Personaje">
+
+            <!-- Información del personaje -->
+            <div class="info">
+                <h1 id="personaje-nombre">Cargando...</h1>
+                <p><strong>Precio:</strong> <span id="personaje-precio">$0.00</span> MXN</p>
+                <button class="boton-agregar">Agregar al carrito</button>
+                <p id="personaje-descripcion">Cargando descripción...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de personajes relacionados -->
+    <section id="relacionados">
+        <h2>Otros personajes</h2>
+        <div class="grid-container">
+            <a href="detalle_personaje.html?personaje=Cenicienta" class="card">
+                <img src="C:\Users\Camilo Serratos\Downloads\Pagina_Rainbow\Imagenes\CENICIENTA\Captura de Pantalla 2025-03-16 a la(s) 15.55.37.png" alt="Cenicienta">
+                <p>Cenicienta</p>
+            </a>
+            <a href="detalle_personaje.html?personaje=LuliPampin" class="card">
+                <img src="C:\Users\Camilo Serratos\Downloads\Pagina_Rainbow\Imagenes\LULI PAMPIN\Captura de Pantalla 2025-03-16 a la(s) 15.42.01.png" alt="Luli Pampín">
+                <p>Luli Pampín</p>
+            </a>
+            <a href="detalle_personaje.html?personaje=Frozen" class="card">
+                <img src="C:\Users\Camilo Serratos\Downloads\Pagina_Rainbow\Imagenes\FROZEN\Captura de Pantalla 2025-03-16 a la(s) 16.15.43.png" alt="Frozen">
+                <p>Frozen</p>
+            </a>
+            <a href="detalle_personaje.html?personaje=Sirenita" class="card">
+                <img src="C:\Users\Camilo Serratos\Downloads\Pagina_Rainbow\Imagenes\SIRENITA\Captura de Pantalla 2025-03-16 a la(s) 16.07.58.png" alt="Sirenita">
+                <p>Sirenita</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Script para cargar datos dinámicamente -->
+    <script>
+        // Obtener el parámetro de la URL
+        const params = new URLSearchParams(window.location.search);
+        const personaje = params.get("personaje");
+
+        // Base de datos de personajes con imágenes adicionales
+        const personajesData = {
+            "BelyBeto": {
+            nombre: "Bely y Beto",
+            imagenes: [
+                "imageness/belybeto_mini1.png",
+                "imageness/belybeto_mini2.jpeg",
+                "imageness/belybeto_mini3.jpeg"
+            ],
+            descripcion: "Un show lleno de diversión con Bely y Beto.",
+            precio: "$1200.00"
+            },
+            "LuliPampin": {
+            nombre: "Luli Pampín",
+            imagenes: [
+                "imageness/lulipampin_mini1.png",
+                "imageness/lulipampin_mini2.png",
+                "imageness/lulipampin_mini3.jpeg"
+             ],
+             descripcion: "Espectáculo interactivo con música y juegos.",
+            precio: "$1500.00"
+             },
+            "Frozen": {
+            nombre: "Frozen",
+            imagenes: [
+                "imageness/frozen_mini1.png",
+                "imageness/frozen_mini2.png",
+                "imageness/frozen_mini3.png"
+             ],
+             descripcion: "Disfruta de una aventura congelada con los personajes de Frozen.",
+            precio: "$1500.00"
+             },
+            "Sirenita": {
+            nombre: "Sirenita",
+            imagenes: [
+                "imageness/lulipampin_mini1.png",
+                "imageness/lulipampin_mini2.png",
+                "imageness/lulipampin_mini3.jpeg"
+             ],
+             descripcion: "Disfruta de una aventura bajo el agua con Ariel y sus amigos",
+            precio: "$1500.00"
+             },
+             "Pikachu": {
+            nombre: "Pikachu",
+            imagenes: [
+                "imageness/frozen_mini1.png",
+                "imageness/frozen_mini2.png",
+                "imageness/frozen_mini3.png"
+             ],
+             descripcion: "Pikachu esta listo para alegrar tu fiesta y llenarla de alegria",
+            precio: "$1500.00"
+             },
+             "PlimPlim": {
+            nombre: "Plim Plim",
+            imagenes: [
+                "imageness/frozen_mini1.png",
+                "imageness/frozen_mini2.png",
+                "imageness/frozen_mini3.png"
+             ],
+             descripcion: "Plim Plim ya esta aqui y esta listo para jugar contigo y todos tus amigos",
+            precio: "$1500.00"
+             },
+             "Cenicienta": {
+            nombre: "Cenicienta",
+            imagenes: [
+                "imageness/frozen_mini1.png",
+                "imageness/frozen_mini2.png",
+                "imageness/frozen_mini3.png"
+             ],
+             descripcion: "Cenicienta a salido de su castillo para poder convivir contigo",
+            precio: "$1500.00"
+             },
+             "BelyBetoPepo": {
+            nombre: "Bely, Beto y Pepo",
+            imagenes: [
+                "imageness/frozen_mini1.png",
+                "imageness/frozen_mini2.png",
+                "imageness/frozen_mini3.png"
+             ],
+            descripcion: "Un show lleno de diversión con Bely y Beto.",
+            precio: "$1500.00"
+             }
+        };
+        // Mostrar la información del personaje si existe en la base de datos
+        if (personaje && personajesData[personaje]) {
+            const data = personajesData[personaje];
+            document.getElementById("personaje-nombre").textContent = data.nombre;
+            document.getElementById("personaje-imagen").src = data.imagenes[0];
+            document.getElementById("mini1").src = data.imagenes[0];
+            document.getElementById("mini2").src = data.imagenes[1];
+            document.getElementById("mini3").src = data.imagenes[2];
+            document.getElementById("personaje-descripcion").textContent = data.descripcion;
+            document.getElementById("personaje-precio").textContent = data.precio;
+        } else {
+            document.getElementById("personaje-nombre").textContent = "Personaje no encontrado";
+        }
+
+        // Función para cambiar la imagen principal al hacer clic en una miniatura
+        function cambiarImagen(index) {
+            document.getElementById("personaje-imagen").src = personajesData[personaje].imagenes[index - 1];
+        }
+    </script>
+</body>
+</html>
+
